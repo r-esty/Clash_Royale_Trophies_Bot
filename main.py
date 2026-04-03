@@ -6,4 +6,3 @@ from  battlelog import battlelog_call
 from player import players_call
 
 battlelog_call()
-players_call()

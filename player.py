@@ -32,7 +32,7 @@ def players_call():
     
     
     
-    return(opponent_data['bestPathOfLegendSeasonResult']['trophies'])
+    print(opponent_data['bestPathOfLegendSeasonResult']['trophies'])
     
     
     

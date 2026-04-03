@@ -25,7 +25,7 @@ def battlelog_call():
     return(new_opponent_tag)
     
     
-battlelog_call()
+
 
 
                 
