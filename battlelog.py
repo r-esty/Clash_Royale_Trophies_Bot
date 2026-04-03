@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 #Function to call player's battlelog endpoint and recieve opponent's tag
 def battlelog_call():
 
-    player_tag = "2RCR8PJV"
+    player_tag = "GPR2CPGLY"
 
     load_dotenv()
 

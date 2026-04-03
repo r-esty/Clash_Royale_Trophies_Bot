@@ -9,10 +9,10 @@ opponent_tag = battlelog_call()
 
 #new_opponent_tag = opponent_tag[:1]
 
-print(battlelog_call)
+#print(battlelog_call)
 
 
-# Function to call player's player endpoint
+# Function to call opponent's player endpoint
 def players_call():
 
     
@@ -24,6 +24,28 @@ def players_call():
     player_endpoint = (f"https://api.clashroyale.com/v1/players/%23{opponent_tag}")
 
     r=requests.get(f"{player_endpoint}", headers={"Accept":"application/json", "authorization":f"Bearer {clash_api_key}"})
-    print(json.dumps(r.json()))
+    #print(json.dumps(r.json()))
+    
+    opponent_data = r.json()
+    
+    oponnent_trophy = opponent_data['bestPathOfLegendSeasonResult']['trophies']
     
     
+    
+    return(opponent_data['bestPathOfLegendSeasonResult']['trophies'])
+    
+    
+    
+   
+    
+    
+    #opponent_trophy = opbestPathOfLegendSeasonResult"]["trophies"]
+    
+    # x = opponent_data
+    
+    # c = type(x)
+    
+    # print(c)
+    
+    
+players_call()
