@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 #Function to call player's battlelog endpoint and recieve opponent's tag
 def battlelog_call():
 
-    player_tag = "GPR2CPGLY"
+    player_tag = "82QQLU8"
 
     load_dotenv()
 
@@ -19,20 +19,11 @@ def battlelog_call():
     battlelog_data = r.json()
     
     
-    opponent_tag = battlelog_data[13]["opponent"][0]["tag"]
+    opponent_tag = battlelog_data[0]["opponent"][0]["tag"]
+    
     
     new_opponent_tag = opponent_tag[1:]
     return(new_opponent_tag)
-    
-    
-
-
-
-                
 
     
-
-
-
     
-
