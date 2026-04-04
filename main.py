@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 from  battlelog import battlelog_call
 from player import players_call
 import time
+import requests
+
+ntfy_url = "https://ntfy.sh/clash_royale_trophies_bot-r-esty"
  
 last_opponent = None
 
@@ -18,7 +21,7 @@ while True:
         opponents_name = value_list[3]
         
         if last_opponent != opponents_tag:
-            print(f"You recently faced {opponents_name} with the tag ({opponents_tag}) their highest rating is {rating} and highest league is {league}")
+            requests.post(f"{ntfy_url}", f"You recently faced {opponents_name} with the tag ({opponents_tag}) their highest rating is {rating} and highest league is {league}")
             last_opponent = opponents_tag
     
     except Exception as e:
@@ -26,4 +29,5 @@ while True:
         
         
     
-    time.sleep(5)
+    time.sleep(60)
+    
